@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <style>
+    body {
+        background-image: url(https://static.vecteezy.com/ti/vetor-gratis/p1/6413043-vermelho-azul-gradiente-pasta-soft-abstrato-fundo-voce-pode-usar-este-fundo-para-seu-conteudo-como-tecnologia-video-jogo-promocao-cartao-banner-apresentacao-esportiva-site-mais-vetor.jpg);
+        background-size: cover;
+        font-size: 18pt;
+    } 
+
+    h1 {color: black;
+        font-style: italic;
+        font-size: 40pt;
+        font-family:'Courier New', Courier, monospace;
+        height: 150px;
+        margin-bottom: 100px;
+        background-image: url(http://maturitha.com.br/wp-content/uploads/2015/06/fundo-site-maturitha.png);
+    }
+
+    p {
+        position: absolute;
+        bottom: 0;
+        width: 100%;   
+        text-align: center;
+        font-family: cursive; 
+        font-size: 15pt;
+        font-style: italic;
+    }
+
+    img {
+        vertical-align: middle;
+    }
+
+    div#res {
+        font-style: normal;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 18pt;
+        margin-top: 20px;
+        background-color: white;
+        background-image: url(https://www.jeitodegente.com.br/wp-content/uploads/2018/03/imagens-fundo-banner-site-03.png);
+    }
+
+
+    </style>
+</head>
+<body>
+    <h1>CALCULADORA<img src="https://cdn-icons-png.flaticon.com/512/1815/1815966.png" height="150"></h1>
+    <input type="number" name="txtn1" id="txtn1"> +
+    <input type="number" name="txtn2" id="txtn2">
+    <input type="button" value="Somar" onclick="Somar()">
+    <div id="res">Resultado</div>
+    <p>Made by: Klein &reg;</p>
+
+    <script>
+        function Somar() {
+            var tn1 = document.getElementById('txtn1')
+            var tn2 = document.getElementById('txtn2')
+            var res = document.getElementById('res')
+            var n1 = Number(tn1.value)
+            var n2 = Number(tn2.value)
+            var s = n1 + n2
+            res.innerHTML = `A soma entre ${n1} e ${n2} é igual a <strong>${s}</strong>`;
+        }
+    </script>
+     
+</body>
+</html>
