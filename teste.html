@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste</title>
+    <style>
+        body {
+            background-image: url(https://i.pinimg.com/564x/be/3e/3c/be3e3c9513e72c9612419fa896486a33.jpg);
+        }
+
+        h1 {
+            color: blueviolet;
+            font-size: 35pt;
+            font-style: italic;
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+        }
+
+        p {
+            color: black;
+            font: oblique 25pt Arial;
+        }
+
+
+
+    </style>
+</head>
+<body>
+    <h1>Olá Mundo!</h1>
+    <p><script> 
+    var nome = window.prompt("Qual seu nome?")
+    document.write(`É um prazer te conhecer <strong>${nome.toUpperCase()}</strong>!`)
+    </script></p>
+    <p><script>
+    var idade = window.prompt("Qual sua idade?")
+    var i1 = 2022 - idade
+    var i2 = 2023 - idade
+    document.write(`Sabendo que você tem ${idade} anos posso pensar que você nasceu em ${i1} ou ${i2}`)
+    </script></p>
+
+    <p>Qual o ano real que você nasceu?</p>
+    <input type="number" value="ano" id="ano">
+    <input type="button" value="Enviar" onclick="ano()">
+    <div id = "real">Então na verdade você nasceu em:</div>
+
+    <script>
+        function ano(){
+           var ano = document.getElementById('ano')
+           var real = document.getElementById('real')
+           var a = Number(ano.value)
+           real.innerText = `Legal! Você nasceu em ${a}`
+        }
+    </script>
+    
+    
+    
+</body>
+</html>
